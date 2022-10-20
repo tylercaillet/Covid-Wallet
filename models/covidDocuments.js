@@ -1,0 +1,12 @@
+const { Schema } = require('mongoose')
+
+const covidDocuments = new Schema(
+  {
+    nameDocument: { type: String, required: true },
+    lastDate: { type: String, required: true },
+    infoType: { type: String, required: true }
+  },
+  { timestamps: true }
+)
+
+module.exports = covidDocuments

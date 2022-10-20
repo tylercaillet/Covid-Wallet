@@ -1,0 +1,23 @@
+{
+  "name": "covid-wallet",
+  "version": "1.0.0",
+  "description": "## Date 10/19/2002",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylercaillet/Covid-Wallet.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tylercaillet/Covid-Wallet/issues"
+  },
+  "homepage": "https://github.com/tylercaillet/Covid-Wallet#readme",
+  "dependencies": {
+    "mongoose": "^6.6.5"
+  }
+}
