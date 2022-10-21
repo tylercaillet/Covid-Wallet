@@ -1,5 +1,5 @@
 const db = require('../db')
-const { userOne } = require('../models')
+const { UserOne } = require('../models')
 
 db.on('error', console.error.bind(console, 'MongoDB connection error'))
 
@@ -12,7 +12,7 @@ const main = async () => {
     }
   ]
 
-  await userOne.insertOne(userOnes)
+  await UserOne.insertOne(userOnes)
   console.log('Created user!')
 }
 const run = async () => {

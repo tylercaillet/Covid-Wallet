@@ -1,15 +1,14 @@
-const mongoose = require('mongoose')
 const { Schema } = require('mongoose')
 
-const covidDocuments = new Schema(
+const CovidDocuments = new Schema(
   {
     title: { type: String, default: null },
     DOB: { type: String, required: true },
     first: { type: String, required: true },
     second: { type: String, required: true },
-    id: { type: String, required: true }
+    userOne_id: { type: Schema.Types.ObjectId, ref: 'userOne_id' }
   },
   { timestamps: true }
 )
 
-module.exports = mongoose.model('covidDocuments', covidDocuments)
+module.exports = CovidDocuments

@@ -2,10 +2,10 @@ const mongoose = require('mongoose')
 const UserSchema = require('./userOne')
 const DocumentsSchema = require('./covidDocuments')
 
-const userOne = mongoose.model('userOne', UserSchema)
-const covidDocuments = mongoose.model('covidDocument', DocumentsSchema)
+const UserOne = mongoose.model('UserOne', UserSchema)
+const CovidDocuments = mongoose.model('CovidDocument', DocumentsSchema)
 
 module.exports = {
-  userOne,
-  covidDocuments
+  UserOne,
+  CovidDocuments
 }
