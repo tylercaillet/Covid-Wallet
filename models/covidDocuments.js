@@ -3,9 +3,11 @@ const { Schema } = require('mongoose')
 
 const covidDocuments = new Schema(
   {
-    nameDocument: { type: String, default: null },
-    lastDate: { type: String, required: true },
-    infoType: { type: String, required: true }
+    title: { type: String, default: null },
+    DOB: { type: String, required: true },
+    first: { type: String, required: true },
+    second: { type: String, required: true },
+    id: { type: String, required: true }
   },
   { timestamps: true }
 )
