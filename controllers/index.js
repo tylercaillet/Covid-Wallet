@@ -1,8 +1,8 @@
-const Covid = require('../models/covidDocuments')
+const { UserOne, CovidDocuments } = require('../models')
 
 const createCovid = async (req, res) => {
   try {
-    const covid = await new Covid(req.body)
+    const covid = await new CovidDocuments(req.body)
     await covid.save()
     return res.status(201).json({
       covid
@@ -14,7 +14,7 @@ const createCovid = async (req, res) => {
 
 const getAllCovid = async (req, res) => {
   try {
-    const covids = await Covid.find()
+    const covids = await CovidDocuments.find()
     return res.status(200).json({ covids })
   } catch (error) {
     return res.status(500).send(error.message)
@@ -24,7 +24,7 @@ const getAllCovid = async (req, res) => {
 const getCovidById = async (req, res) => {
   try {
     const { id } = req.params
-    const covid = await Covid.findById(id)
+    const covid = await CovidDocuments.findById(id)
     if (covid) {
       return res.status(200).json({ covid })
     }
@@ -38,9 +38,13 @@ const getCovidById = async (req, res) => {
 
 const updateCovid = async (req, res) => {
   try {
-    const covid = await Covid.findByIdAndUpdate(req.params.i, req.body, {
-      new: true
-    })
+    const covid = await CovidDocuments.findByIdAndUpdate(
+      req.params.i,
+      req.body,
+      {
+        new: true
+      }
+    )
     res.status(200).json(covid)
   } catch (error) {
     return res.status(500).send(error.message)
@@ -50,7 +54,7 @@ const updateCovid = async (req, res) => {
 const deleteCovid = async (req, res) => {
   try {
     const { id } = req.params
-    const deleted = await Covid.findByIdAndDelete(id)
+    const deleted = await CovidDocuments.findByIdAndDelete(id)
     if (deleted) {
       return res.status(200).send('Document deleted')
     }
