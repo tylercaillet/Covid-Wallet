@@ -1,5 +1,29 @@
 const { UserOne, CovidDocuments } = require('../models')
 
+const createUserOne = async (req, res) => {
+  try {
+    const user = await new UserOne(req.body)
+    await user.save()
+    return res.status(201).json({
+      covid
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
+
+const getAllUserOne = async (req, res) => {
+  try {
+    const user = await new UserOne(req.body)
+    await user.save()
+    return res.status(201).json({
+      covid
+    })
+  } catch (error) {
+    return res.status(500).json({ error: error.message })
+  }
+}
+
 const createCovid = async (req, res) => {
   try {
     const covid = await new CovidDocuments(req.body)
@@ -69,5 +93,7 @@ module.exports = {
   getAllCovid,
   getCovidById,
   updateCovid,
-  deleteCovid
+  deleteCovid,
+  createUserOne,
+  getAllUserOne
 }

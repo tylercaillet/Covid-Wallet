@@ -2,6 +2,10 @@ const { Router } = require('express')
 const controllers = require('../controllers')
 const router = Router()
 
+router.get('/userOne', controllers.getAllUserOne)
+
+router.post('/userOne', controllers.createUserOne)
+
 router.get('/', (req, res) => res.send('This is the router'))
 
 router.get('/covids', controllers.getAllCovid)
