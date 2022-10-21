@@ -9,4 +9,4 @@ const covidDocuments = new Schema(
   { timestamps: true }
 )
 
-module.exports = covidDocuments
+module.exports = mongoose.model('covidDocuments', covidDocuments)
