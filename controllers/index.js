@@ -2,10 +2,10 @@ const { UserOne, CovidDocuments } = require('../models')
 
 const createUserOne = async (req, res) => {
   try {
-    const user = await new UserOne(req.body)
-    await user.save()
+    const userOne = await new UserOne(req.body)
+    await userOne.save()
     return res.status(201).json({
-      covid
+      userOne
     })
   } catch (error) {
     return res.status(500).json({ error: error.message })
@@ -14,10 +14,10 @@ const createUserOne = async (req, res) => {
 
 const getAllUserOne = async (req, res) => {
   try {
-    const user = await new UserOne(req.body)
-    await user.save()
+    const userOne = await new UserOne(req.body)
+    await userOne.save()
     return res.status(201).json({
-      covid
+      userOne
     })
   } catch (error) {
     return res.status(500).json({ error: error.message })
