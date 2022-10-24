@@ -14,3 +14,5 @@ const DocumentCard = ({image, name, typeDocument, onClick, id}) => {
         </div>
     )
 }
+
+export default DocumentCard
