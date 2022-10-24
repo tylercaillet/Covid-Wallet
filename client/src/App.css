@@ -1,21 +1,54 @@
+body {
+  background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0) 20%, rgba(0,0,0,0) 80%, rgba(0,0,0,1)), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+  background-size: 100% 100%, 10px 10px, 10px 10px, 10px 5px;
+  background-position: 0px 0px, 0px 0px, 5px 5px, 0px 0px;
+}
 
 .logo {
  display: block;
  margin-left: auto;
  margin-right: auto;
  margin-top: 150px;
- width: 50%;
+ width: 20%;
 }
 
 
 .App-link {
-  color: #61dafb;
+  color: red;
+}
+
+
+
+.Covid {
+  text-align: center;
+  color: red;
 }
 
 .link {
- margin-top: 450px;
+  margin: 0 1em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: red;
 
 }
+
+.wallet-logo {
+  display: block;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 25px;
+ width: 15%;
+
+}
+
+.homePage {
+  text-align: center;
+  color: red;
+}
+
+
 
 
 
