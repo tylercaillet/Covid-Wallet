@@ -46,6 +46,19 @@ body {
 .homePage {
   text-align: center;
   color: red;
+  padding-top: 50px;
+}
+
+.userlogin {
+  text-align: center;
+  color: red;
+  padding-top: 50px;
+}
+
+.create-user {
+  text-align: center;
+  color: red;
+  padding-top: 50px;
 }
 
 
