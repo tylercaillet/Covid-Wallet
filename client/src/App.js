@@ -5,7 +5,7 @@ import Home from './pages/Home'
 import Login from './components/Login'
 import CreateUser from './components/CreateUser'
 import DocumentCard from './components/DocumentCard'
-import userDocuments from './pages/Home'
+import UserDocuments from './pages/userDocuments'
 
 const App = () => {
   return (

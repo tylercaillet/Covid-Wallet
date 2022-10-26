@@ -1,13 +1,14 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { axios } from 'axios'
+import axios from 'axios'
 
-import DocumentsCard from '../components/DocumentCard'
 import Login from '../components/Login'
 import CreateUser from '../components/CreateUser'
 import DocumentCard from '../components/DocumentCard'
 
-const userDocument = () => {
+const Base_URL = 'http://localhost:3001/api'
+
+const UserDocument = () => {
   let navigate = useNavigate()
 
   const [documents, setDocuments] = useState([])
@@ -16,7 +17,7 @@ const userDocument = () => {
   const [loginQuery, setLoginQuery] = useState('')
 
   const getDocuments = async () => {
-    const res = await axios.get('')
+    const res = await axios.get(`${Base_URL}/covids`)
 
     setDocuments(res.data.results)
   }
@@ -24,7 +25,7 @@ const userDocument = () => {
   const getLogin = async (event) => {
     event.preventDefault()
     setLoggedIn(true)
-    const res = await axios.get('')
+    const res = await axios.get(`${Base_URL}/userOne`)
 
     setLogin(res.data.results)
     setLoginQuery('')
@@ -53,15 +54,15 @@ const userDocument = () => {
         <div className="loggedin">
           <h2>User logged in</h2>
           <section className="user-logged container-grid">
-            {login?.map((result) => {
-              ;<CreateUser
+            {login?.map((result) => (
+              <CreateUser
                 key={result.id}
                 id={result.id}
                 image={result.background_image}
                 name={result.name}
                 onClick={viewUser}
               />
-            })}
+            ))}
           </section>
         </div>
       ) : (
@@ -84,4 +85,4 @@ const userDocument = () => {
   )
 }
 
-export default userDocument
+export default UserDocument
