@@ -11,6 +11,7 @@ const main = async () => {
       DOB: 'June 8th, 1995',
       first: 'pfizer; May 13th, 2021',
       second: 'pfizer; June 6th, 2021',
+      image: 'incoming-14208F4E-2CB6-4DF7-890B-5AD7007C4A71.jpeg',
       userOne_id: users[0]._id
     },
     {
