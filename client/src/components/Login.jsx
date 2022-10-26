@@ -12,12 +12,12 @@ const LoginForm = () => {
        setFormState({ ...formState, [event.target.id]: event.target.value });
     };
 
-    const handleSubmit = event => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        axios.post('http://localhost:3000/api/userOne')
-        console.log(formState);
+        let res = await axios.post('http://localhost:3001/api/userOne', formState)
+        console.log(res.data);
         setFormState(initialState);
-        navigate(`/login/${id}`)
+        navigate(`/DocumentCard`)
     }
     return (
         <div className="formContainer">
