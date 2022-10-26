@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import Login from './components/Login'
 import CreateUser from './components/CreateUser'
+import DocumentCard from './components/DocumentCard'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/createUser" element={<CreateUser />} />
+          <Route path="/DocumentCard" element={<DocumentCard />} />
         </Routes>
       </main>
     </div>

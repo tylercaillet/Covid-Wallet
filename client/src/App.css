@@ -34,6 +34,10 @@ body {
 
 }
 
+.Link {
+  color: red;
+}
+
 .wallet-logo {
   display: block;
  margin-left: auto;
@@ -63,10 +67,19 @@ body {
 
 .userName {
   color: red;
+  margin-left: 100px;
+  
 }
 
 .password {
   color: red;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+  padding-top: 100px;
 }
 
 

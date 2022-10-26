@@ -20,6 +20,7 @@ const LoginForm = () => {
         navigate(`/login/${id}`)
     }
     return (
+        <div className="formContainer">
         <form onSubmit={handleSubmit}>
             <label htmlFor="username" className='userName'>Username:</label>
             <input
@@ -37,15 +38,12 @@ const LoginForm = () => {
             />
             <button type="submit">Login</button>
         </form>
+        </div>
     )
 }
 
 
-// const Login = () => {
-//     return (
-//         <div className='userlogin'>Hello</div>
-//     )
-// }
+
 
 
 export default LoginForm
