@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import axios from 'axios'
+import { useNavigate, useParams } from 'react-router-dom'
 
 const LoginForm = () => {
-    const initialState = { username: '' };
+    let navigate = useNavigate()
+    let { id } = useParams()
+    const initialState = { username: '', password: '' };
     const [formState, setFormState] = useState(initialState);
 
     const handleChange = event => {
@@ -10,19 +14,21 @@ const LoginForm = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
+        axios.post('http://localhost:3000/api/userOne')
         console.log(formState);
         setFormState(initialState);
+        navigate(`/login/${id}`)
     }
     return (
         <form onSubmit={handleSubmit}>
-            <label htmlFor="username">Username:</label>
+            <label htmlFor="username" className='userName'>Username:</label>
             <input
             id="username"
             type="text"
             onChange={handleChange}
             value={formState.username}
             />
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password" className='password'>Password:</label>
             <input
             id="password"
             type="password"
@@ -42,4 +48,4 @@ const LoginForm = () => {
 // }
 
 
-export default Login
+export default LoginForm
