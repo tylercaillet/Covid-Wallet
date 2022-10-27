@@ -1,9 +1,10 @@
-const DocumentCard = ({image, name, typeDocument, onClick, id}) => {
+const DocumentCard = ({image, name, typeDocument, onClick, id, first}) => {
 
     return (
         <div className='card' onClick={() => onClick(id)}>
             <div className='img-wrapper'>
                 <img src={image} alt={name} />
+                <p>{first}</p>
 
 
             </div>

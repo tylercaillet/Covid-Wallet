@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import DocumentCard from '../components/DocumentCard'
 
 import Login from '../components/Login'
 import CreateUser from '../components/CreateUser'
-import DocumentCard from '../components/DocumentCard'
 
 const Base_URL = 'http://localhost:3001/api'
 
@@ -19,7 +19,7 @@ const UserDocument = () => {
   const getDocuments = async () => {
     const res = await axios.get(`${Base_URL}/covids`)
 
-    setDocuments(res.data.results)
+    setDocuments(res.data.covids)
   }
 
   const getLogin = async (event) => {
@@ -58,7 +58,7 @@ const UserDocument = () => {
               <CreateUser
                 key={result.id}
                 id={result.id}
-                image={result.background_image}
+                image={result.image}
                 name={result.name}
                 onClick={viewUser}
               />
@@ -71,10 +71,10 @@ const UserDocument = () => {
           <section className="container-grid">
             {documents?.map((document) => (
               <DocumentCard
-                key={document.id}
-                id={document.id}
-                image={document.image_background}
-                name={document.name}
+                key={document._id}
+                id={document._id}
+                image={document.image}
+                name={document.title}
                 onClick={viewDocument}
               />
             ))}

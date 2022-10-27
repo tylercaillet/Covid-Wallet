@@ -35,7 +35,7 @@ const CreateUser = () => {
             onChange={handleChange}
             value={formState.password}
             />
-            <button type="submit">Create new user</button>
+            <button type="submit">Create</button>
         </form>
         </div>
     )
