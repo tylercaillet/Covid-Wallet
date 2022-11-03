@@ -67,14 +67,18 @@ const UserDocument = () => {
         </div>
       ) : (
         <div className="documents">
-          <h2>Documents</h2>
+          <h2>Documents:</h2>
           <section className="container-grid">
             {documents?.map((document) => (
               <DocumentCard
                 key={document._id}
                 id={document._id}
                 image={document.image}
-                name={document.title}
+                title={document.title}
+                first={document.first}
+                second={document.second}
+                DOB={document.DOB}
+                getDocuments={getDocuments}
                 onClick={viewDocument}
               />
             ))}

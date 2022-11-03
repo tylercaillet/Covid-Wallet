@@ -6,6 +6,7 @@ import Login from './components/Login'
 import CreateUser from './components/CreateUser'
 import DocumentCard from './components/DocumentCard'
 import UserDocuments from './pages/userDocuments'
+import UpdateDocument from './components/UpdateDocument'
 
 const App = () => {
   return (
@@ -21,6 +22,10 @@ const App = () => {
           <Route path="/createUser" element={<CreateUser />} />
           <Route path="/DocumentCard" element={<UserDocuments />} />
           <Route path="/login/:id" element={<DocumentCard />} />
+          <Route
+            path="/DocumentCard/UpdateDocument"
+            element={<UpdateDocument />}
+          />
         </Routes>
       </main>
     </div>

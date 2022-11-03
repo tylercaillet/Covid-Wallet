@@ -103,6 +103,14 @@ img {
 .Covid {
   font-size: 75px;
 }
+/* button {
+  display: flex;
+  flex-direction: row-reverse;
+} */
+
+.update-document {
+  color: red;
+}
 
 
 
