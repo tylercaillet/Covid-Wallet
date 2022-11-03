@@ -20,7 +20,7 @@ const DeleteDocumentCard = async () => {
         }
     }
 }
-console.log(id)
+
     return (
         <div className='card'>
             <div className='img-wrapper'>
