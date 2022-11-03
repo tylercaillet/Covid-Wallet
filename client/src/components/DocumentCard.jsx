@@ -2,7 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
-const BASE_URL = 'http://localhost:3001/api'
+const BASE_URL = '/api'
 
 const DocumentCard = ({image, name, title,second, first,DOB, id, getDocuments}) => {
 // const {id} = useParams()
@@ -20,7 +20,7 @@ const DeleteDocumentCard = async () => {
         }
     }
 }
-
+console.log(id)
     return (
         <div className='card'>
             <div className='img-wrapper'>
@@ -30,7 +30,7 @@ const DeleteDocumentCard = async () => {
                 <p>{first}</p>
                 <p>{second}</p>
                 <p>{DOB}</p>
-                <Link to={`/DocumentCard/UpdateDocument`}>
+                <Link to={`/DocumentCard/UpdateDocument/${id}`}>
                     <button className = 'update'>Update</button>
                 </Link>
                 <button onClick={() => DeleteDocumentCard()}>Delete</button>

@@ -23,7 +23,7 @@ const App = () => {
           <Route path="/DocumentCard" element={<UserDocuments />} />
           <Route path="/login/:id" element={<DocumentCard />} />
           <Route
-            path="/DocumentCard/UpdateDocument"
+            path="/DocumentCard/UpdateDocument/:id"
             element={<UpdateDocument />}
           />
         </Routes>

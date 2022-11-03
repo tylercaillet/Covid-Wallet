@@ -63,7 +63,7 @@ const getCovidById = async (req, res) => {
 const updateCovid = async (req, res) => {
   try {
     const covid = await CovidDocuments.findByIdAndUpdate(
-      req.params.i,
+      req.params.id,
       req.body,
       {
         new: true

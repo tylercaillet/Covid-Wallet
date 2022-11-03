@@ -1,11 +1,18 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
+
 
 const BASE_URL = '/api'
 
-const UpdateDocument = ({id}) => {
+  
+
+
+
+const UpdateDocument = ({}) => {
     let { covidId } = useParams()
+    let id = ''
+    console.log(covidId) 
     let navigate = useNavigate()
     
     const initalForm = {
