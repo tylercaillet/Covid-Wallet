@@ -13,7 +13,7 @@ const CreateUser = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        let res = await axios.post('http://localhost:3001/api/userOne', formState)
+        let res = await axios.post('/api/userOne', formState)
         console.log(res.data);
         setFormState(initialState);
         navigate(`/Login`)

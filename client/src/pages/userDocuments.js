@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import DocumentCard from '../components/DocumentCard'
-
 import Login from '../components/Login'
 import CreateUser from '../components/CreateUser'
 
